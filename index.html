@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Official Personality Survey 🧠</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #89CFF0, #ffffff);
+    text-align: center;
+    padding: 30px;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.question {
+    margin: 20px 0;
+    text-align: left;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #333;
+}
+
+#result {
+    display: none;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>✨ Official Personality Survey ✨</h1>
+    <p>Please answer honestly. This may reveal something important.</p>
+
+    <div class="question">
+        <p>1. What’s your favourite color?</p>
+        <input type="radio" name="q1" value="blue"> Blue<br>
+        <input type="radio" name="q1" value="black"> Black<br>
+        <input type="radio" name="q1" value="pink"> Pink<br>
+        <input type="radio" name="q1" value="other"> Other<br>
+    </div>
+
+    <div class="question">
+        <p>2. What’s your favourite chocolate?</p>
+        <input type="radio" name="q2" value="kinderjoy"> Kinder Joy<br>
+        <input type="radio" name="q2" value="dairy"> Dairy Milk<br>
+        <input type="radio" name="q2" value="snickers"> Snickers<br>
+        <input type="radio" name="q2" value="other"> Other<br>
+    </div>
+
+    <div class="question">
+        <p>3. Eye color?</p>
+        <input type="radio" name="q3" value="brown"> Beautiful Brown<br>
+        <input type="radio" name="q3" value="black"> Black<br>
+        <input type="radio" name="q3" value="hazel"> Hazel<br>
+        <input type="radio" name="q3" value="other"> Other<br>
+    </div>
+
+    <div class="question">
+        <p>4. Favourite subject?</p>
+        <input type="radio" name="q4" value="physiology"> Physiology<br>
+        <input type="radio" name="q4" value="anatomy"> Anatomy<br>
+        <input type="radio" name="q4" value="biochem"> Biochemistry<br>
+        <input type="radio" name="q4" value="other"> Other<br>
+    </div>
+
+    <div class="question">
+        <p>5. Who is your favourite friend?</p>
+        <input type="radio" name="q5" value="aryan"> Aryan 😉<br>
+        <input type="radio" name="q5" value="someone"> Someone else<br>
+    </div>
+
+    <button onclick="checkAnswers()">Submit</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function checkAnswers() {
+    let score = 0;
+
+    if(document.querySelector('input[name="q1"]:checked')?.value === "blue") score++;
+    if(document.querySelector('input[name="q2"]:checked')?.value === "kinderjoy") score++;
+    if(document.querySelector('input[name="q3"]:checked')?.value === "brown") score++;
+    if(document.querySelector('input[name="q4"]:checked')?.value === "physiology") score++;
+    if(document.querySelector('input[name="q5"]:checked')?.value === "aryan") score++;
+
+    let resultBox = document.getElementById("result");
+    resultBox.style.display = "block";
+
+    if(score >= 3){
+        resultBox.innerHTML = "🎉 Congratulations! 🎉 <br><br> You are officially Aryan's crush 😌💙";
+    } else {
+        resultBox.innerHTML = "Interesting results... 🤔 <br><br> But one thing is clear — someone here definitely likes you 😉";
+    }
+}
+</script>
+
+</body>
+</html>
