@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Important Personality Test 🤓</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #89CFF0, #ffffff);
+    text-align: center;
+    padding: 40px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.question {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #000;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #333;
+}
+
+#result {
+    display: none;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>✨ Official Personality Test ✨</h1>
+    <p>Please answer honestly. This is scientifically important.</p>
+
+    <div class="question">
+        <p>Q1: What’s your favourite color?</p>
+        <input type="radio" name="q1"> Blue<br>
+    </div>
+
+    <div class="question">
+        <p>Q2: What’s your favourite chocolate?</p>
+        <input type="radio" name="q2"> Kinder Joy<br>
+    </div>
+
+    <div class="question">
+        <p>Q3: What is the color of your eyes?</p>
+        <input type="radio" name="q3"> Beautiful Brown<br>
+    </div>
+
+    <div class="question">
+        <p>Q4: Which subject do you like the most?</p>
+        <input type="radio" name="q4"> Physiology<br>
+    </div>
+
+    <div class="question">
+        <p>Q5: Who is your favourite friend?</p>
+        <input type="radio" name="q5"> Aryan 😉<br>
+    </div>
+
+    <button onclick="showResult()">Submit Answers</button>
+
+    <div id="result">
+        🎉 Congratulations! 🎉 <br><br>
+        You are officially Aryan's crush 😌 <br><br>
+        And apparently the girl whose eyes he has fallen for 💙
+    </div>
+</div>
+
+<script>
+function showResult() {
+    document.getElementById("result").style.display = "block";
+}
+</script>
+
+</body>
+</html>
